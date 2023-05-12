@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h1>Calculator</h1>
+            <div>
+                <input type="text" style="text-align: right;"id="inputNum" />
+            </div>
+            <br>
+            <div>
+                <button type="button" onclick="operatorClick('+')">+</button>
+                <button type="button" onclick="operatorClick('-')">-</button>
+                <button type="button" onclick="operatorClick('*')">*</button>
+                <button type="button" onclick="operatorClick('/')">/</button>
+                <button type="button" onclick="clearFields()">C</button>
+                <button type="button" onclick="calculate()">=</button>
+            </div>
+            <div>
+                <h3>Result: <span id="result">0</span></h3>
+            </div>
+        </form>
+    </div>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
